@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>盒子模型</title>
+</head>
+<style>
+    .eg {
+        width: 300px;
+        height: 200px;
+        /* 边框的粗细  px */
+        border-width: 10px;
+        /* style设置样式; dashed：虚线' solid 实线  dotted 点线*/
+        border-style: dashed;
+        /* border-style: solid; */
+        /* border-style: dotted; */
+        border-color: yellow;
+        /* 边框复合写法
+        border:10px red solid; */
+        /* 边框分开写法
+        border-right: dotted red 10px;
+        border-left: solid gray 10px;
+        border-bottom: dashed pink 10px; */
+
+    }
+
+    h1 {
+        height: 200px;
+        background-color:pink;
+        /* 没有指定宽度时继承父类(body)的宽度,(占满浏览器) */        
+        padding: 30px; 
+        /* 上下左右加30px， */
+    }
+    h2{
+        width: 300px;
+        height: 100px;
+        background-color:purple;
+    }
+    h2 p{
+        /* width: 100%; */
+        padding: 30px;
+        /* 当不指定宽度/高度属性时，不会撑破盒子 */
+        background-color: red;
+    }
+    h4{
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+    }
+    .one{
+        margin-bottom: 50px;
+    }
+    .two{
+        margin-top: 50px;
+    }
+    h5{
+        width: 400px;
+        height: 200px;
+        background-color: aqua;
+        /* (块级元素)实现居中对齐：1、盒子有宽度。2、左右外边距设置为左右为0 */
+        margin :0 auto;
+        text-align: center;
+    }
+    /* margin的简变写法跟padding一样 1、2、3、4参数 */
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    h6{
+        width: 330px;
+        height: 100px;
+        background-color: blue;
+        border-radius: 20px;
+        font-size: 14px;
+
+    }
+    .radius{
+        height: 200px;
+        width: 200px;
+        background-color:  pink;
+        /* 正方形做圆，设置为宽度的50% */
+        border-radius: 50%;
+    }
+    .juxing{
+        height: 300px;
+        width: 100px;
+        background-color: pink;
+        /* 矩形做圆角矩形，设置为高度的50% */
+        border-radius: 150px;
+       
+    }
+    .shadow{
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        background-color: pink;
+        /* 水平阴影位置，垂直  （ 模糊距离 模糊尺寸 颜色 外部阴影(默认)内部阴影（inset）) */
+        /* box-shadow: 10px 10px 10px -4px; */
+}
+.shadow:hover{
+    box-shadow: 10px 10px 10px -4px;
+}
+</style>
+
+<body>
+    <div class="eg"></div>
+    <h1></h1>
+    <h2><p></p></h2>
+    <h3>外边距</h3>
+    <span></span>
+    <h4 class="one">1</h4>
+    <h4 class="two">2</h4>
+    <h5>我想居中对齐</h5>
+    <!-- 圆角边框 -->
+    <h6>圆角边框(border-radius: px)</h6>
+    <!-- 圆形的制作方法 -->
+    <div class="radius"></div>
+    <!-- 圆角矩形做法 -->
+    <div class="juxing"></div>
+    <div class="shadow"></div>
+    <!-- 文字阴影设置同盒子阴影相同 -->
+</html>

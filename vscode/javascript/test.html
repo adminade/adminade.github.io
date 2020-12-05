@@ -1,0 +1,76 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <!-- <p id="message">
+        Whee!</p> -->
+        <img src="logo.png" id="message" alt="">
+    <!--(使兴奋,使激动,啊)!-->
+    <script type="text/javascript">
+        //通过js来设置<p>标签的初试显示位置
+        function positionMessage() {
+            if (!checkCompatibility) return;
+            var ele = document.getElementById("message");
+            ele.style.position = "absolute";
+            ele.style.top = "100px";
+            ele.style.left = "50px";
+            moveElement("message",2000,100,5);
+        }
+        function moveElement(elementID, final_x, final_y, interval) {
+            //下面是每次调用这个新函数可能变化的东西
+            //1、打算移动的元素ID  -elementID
+            //2、元素移动终点的横坐标  -final_x
+            //3、元素移动终点的纵坐标  -final_y
+            //4、每次元素移动所产生的时间间隔  interval
+            //为上面的变化的东西取个描述性的名字便于理解
+            if (!document.getElementById(elementID)) { return false; }
+            else { var ele = document.getElementById(elementID); }
+            var xpos = parseInt(ele.style.left);
+            var ypos = parseInt(ele.style.top);
+            if (xpos == final_x && ypos == final_y) {
+                return true;
+            }
+            if (xpos < final_x) {
+                xpos++;
+            }
+            if (xpos > final_x) {
+                xpos--;
+            }
+            if (ypos > final_y) {
+                ypos--;
+            }
+            if (ypos < final_y) {
+                ypos++;
+            }
+            ele.style.left = xpos + "px";
+            ele.style.top = ypos + "px";
+            var repeat = "moveElement('" + elementID + "','" + final_x + "','" + final_y + "','" + interval + "')";
+            movement = setTimeout(repeat, interval);
+        }
+        var loadeventlist = [positionMessage];
+        addOnloadEventlist(loadeventlist);
+        //给window.onload事件绑定函数数组   这个函数数组将在页面全部加在完毕之后被调用
+        function addOnloadEventlist(eventlist) {
+            if (!eventlist) return false;
+            var oldonload = window.onload;
+            window.onload = function () {
+                for (var i = 0; i < eventlist.length; i++) {
+                    eventlist[i]();
+                }
+            }
+        }
+        //检查浏览器对DOM方法的支持
+        function checkCompatibility() {
+            if (!document.getElementById) return false;
+            if (!document.createElement) return false;
+            if (!document.createTextNode) return false;
+            if (!document.getElementsByTagName) return false;
+            if (!document.getElementsByName) return false;
+            return true;
+        }
+
+    </script>
+</body>
+</html>

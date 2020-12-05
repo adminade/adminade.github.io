@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素</title>
+</head>
+<style>
+    a {
+        width: 300px;
+        height: 100px;
+        background-color: purple;
+        /* 把行内元素转换成 块级元素 */
+        display: block;
+    }
+
+    /* div {
+        width: 300px;
+        height: 100px;
+       background-color: white;
+        把块级元素转换成 行内元素
+    display: inline;
+    }
+
+    */
+    span {
+        width: 300px;
+        height: 100px;
+        background-color: skyblue;
+        display: inline-block;
+    }
+
+    div {
+        width: 300px;
+        height: 300px;
+        background-image: url(images/logo.png);
+    }
+</style>
+
+<body>
+    <a href="#">我是行内元素</a>
+    <a href="#">我是行内元素</a>
+    <div>我是块级元素</div>
+    <!-- <div>我是块级元素</div> -->
+    <span>我是行内元素给宽度高度无效，我变成了行内块元素</span>
+
+</body>
+
+</html>

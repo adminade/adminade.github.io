@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格案例</title>
+    <style>
+        table{
+            width: 500px;
+            height: 249px;
+
+        }
+        table td{
+            border: 1px solid red;
+            /* 合并相邻边框 */
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: center ;
+        }
+
+
+    </style>
+</head>
+<body>
+    <table align="center" width="500" height="250" border="1" cellspacing="0">
+  <!-- 表格结构标签：  thead tbody  -->
+    <thead>
+        <th>排名</th>
+        <th>关键词</th>
+        <th>趋势</th>
+        <th>进入搜索</th>
+        <th>最近七日</th>
+        <th>相关链接</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>鬼吹灯</td>
+            <td><img src="down.jpg"></td>
+            <td>456</td>
+            <td>123</td>
+            <td> <a href="#">贴吧  </a> <a href="#">图片</a> <a href="#">百科</a> </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>盗墓笔记</td>
+            <td><img src="down.jpg"></td>
+            <td>4564</td>
+            <td>1323</td>
+            <td> <a href="#">贴吧  </a> <a href="#">图片</a> <a href="#">百科</a> </td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>活着</td>
+            <td><img src="up.jpg"></td>
+            <td>45336</td>
+            <td>12333</td>
+            <td> <a href="#">贴吧  </a> <a href="#">图片</a> <a href="#">百科</a> </td>
+        </tr>
+    
+    </tbody>
+    </table>
+    <table align="center" border="1" width="500" height="250"  cellspacing="0">
+        <tr>
+            <td > </td>
+            <td colspan="2"> </td>
+            <!-- <td> </td> -->
+        </tr>
+        <tr>
+            <td  rowspan="2"> </td>
+            <!-- <td> </td> -->
+            <td> </td>
+        </tr>
+        <tr>
+            <!-- <td> </td> -->
+            <td> </td>
+            <td> </td>
+        </tr>
+    </table>
+</body>
+</html>

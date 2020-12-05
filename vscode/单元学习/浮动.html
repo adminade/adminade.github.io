@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动导读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* .left,
+        .right{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+        .right{
+            /* 层叠，上一个定义被覆盖 */
+        /* float: right; */
+        /* } */
+        .box {
+            width: 1200px;
+            height: 460px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .left1 {
+            float: left;
+            width: 230px;
+            height: 460px;
+            background-color: purple;
+        }
+
+        .right2 {
+            float: left;
+            width: 970px;
+            height: 460px;
+            background-color: gray;
+        }
+
+        /* div没有 ul有内外边距, 先将默认边距去掉 */
+        .box1 {
+            width: 1226px;
+            height: 285px;
+            margin: 0 auto;
+            background-color: skyblue;
+
+
+        }
+
+        li {
+            /* 去掉li的小圆点 */
+            list-style: none;
+        }
+
+        .box1 li {
+            width: 296px;
+            height: 285px;
+            background-color: purple;
+            float: left;
+            margin-right: 14px;
+        }
+        /* .last{
+            最后一个盒子的外边距给0，保证不会撑破box而掉下来
+            margin-right: 0;
+            ！！！注意此时li并没有划上去，因为 .box li 的权重为11, 而.last的权重为10
+        } */
+        .box1 .last{
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left">左青龙</div>
+    <div class="right">右白虎</div>
+    <div class="box">
+        <div class="left1">左侧</div>
+        <div class="right2">右侧</div>
+    </div>
+    <ul class="box1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="last">4</li>
+    </ul>
+</body>
+
+</html>

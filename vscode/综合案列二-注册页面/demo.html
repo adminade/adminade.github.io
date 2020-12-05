@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跑腿驿站注册页面</title>
+</head>
+<body>
+    <h3>顾客是上帝！</h3>
+    <table width="500" action="paotui.mysql" method="get" name="upload">
+        <!-- 第一行 -->
+      <tr>
+           <td>
+            性别:
+           </td>
+           <td>
+            <input type="radio" name="sex" id="man">  <label for="man"> <img src="images/man.jpg" >男  </label>
+             <input type="radio" name="sex" id="women"> <label for="women"> <img src="images/women.jpg">女  </label>
+           </td>
+      </tr>
+        <!-- 第二行 -->
+      <tr>
+          <td>生日:</td>
+          <td>   <select>
+                  <option>--请选择年份--</option>
+                  <option>2001</option>
+                  <option>2002</option>
+                  <option>2003</option>
+                  <option>2004</option>
+                  <option>2005</option>
+                  <option>2006</option>
+               </select>
+               <select>
+                <option>--请选择月份--</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>    
+                <select>
+                    <option>--请选择日--</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                 </select> 
+                </td>  
+        </tr>            
+         <!-- 第三行    -->
+        <tr>
+            <td>配送地址:</td>
+            <td><input type="text" value="长江师范学院"> </td>
+        </tr> 
+        <!-- 第四行    -->
+        <tr>
+            <td>联系电话:</td>
+            <td > <input type="text"> </td>
+        </tr>   
+        <!-- 第五行      -->
+        <tr>
+          <td>真实姓名:</td>
+          <td><input type="text">  </td>
+      </tr>
+      <!-- 第六行 -->
+      <tr>
+          <td>配送时长:</td>
+          <td>
+              <input type="radio" name="time" id="time1"> <label for="time1">15分钟   </label>
+              <input type="radio" name="time"id="time2"> <label for="time2">半小时   </label>
+              <input type="radio" name="time" id="time3"> <label for="time3">一小时  </label>
+              <input type="radio" name="time" id="time4"> <label for="time4">随便   </label>
+
+
+          </td>
+      </tr>
+      <!-- 第七行 -->
+      <tr>
+          <td>喜欢的配送员:</td>
+          <td>
+              <input type="checkbox" name="love"> 妩媚的
+              <input type="checkbox" name="love"> 可爱的
+              <input type="checkbox" name="love"> 小鲜肉
+              <input type="checkbox" name="love"> 大叔叔
+              <input type="checkbox" name="love" checked="checked"> 都喜欢
+          </td>
+      </tr>
+      <!-- 第八行 -->
+      <tr>
+          <td>个人简介:</td>
+          <td>
+              <textarea>个人介绍</textarea>
+          </td>
+      </tr>
+      <!-- 第九行 -->
+      <tr>
+          <td></td>
+          <td><input type="submit" value="免费注册" > </td>
+      </tr>
+      <!-- 第十行 -->
+      <tr>
+          <td></td>
+          <td> <input type="checkbox" checked="checked"> 我已阅读<a href="#"> 跑腿驿站服务条款</a>和<a href="#">会员加入标准</a>
+          </td>
+      </tr>
+      <!-- 第十一行 -->
+      <tr>
+          <td></td>
+          <td><a href="#">已是会员直接登录</a></td>
+      </tr>
+      <!-- 十二行 -->
+      <tr>
+          <td></td>      
+          <td>
+              <ul>
+                <h6>我承诺遵纪守法，维护良好校园环境</h6>
+                  <li>好好学习，天天向上</li>
+                  <li>守护最好的爱</li>
+                  <li>玩的开心</li>
+              </ul>
+
+
+          </td>      
+
+      </tr>
+    </table>
+</body>
+</html>
