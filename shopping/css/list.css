@@ -1,0 +1,56 @@
+.nav{
+    overflow: hidden;
+    /* 不加这个 sk_hd的内容会被压在右边显示，因为nav里面的li高于nav盒子而浮动占用位置就占用了下面的位置
+    所以.. */
+}
+.sk{
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #b1191a;
+    width: 57px;
+    height: 28px;
+    padding-left: 15px;
+}
+.sk_list{
+    float: left;
+}
+.sk_con{
+    float: left;
+}
+.sk_list ul li{
+    float: left;
+}
+.sk_list ul li a{
+    
+    margin-right: 56px;
+    line-height: 47px;
+    padding:0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+.sk_con ul li{
+    float: left;
+}
+.sk_con ul li a {
+    
+    /* margin-right: 56px; */
+    line-height: 47px;
+    padding:0 10px;
+    font-size: 14px;
+
+
+    
+}
+.sk_bd ul li{
+    float: left;
+    margin-right: 13px;
+    width: 286px;
+    height: 442px;
+    border: solid 1px transparent;
+    overflow: hidden;
+}
+.sk_bd ul li:hover{
+border: solid 1px #b1191a;
+}
